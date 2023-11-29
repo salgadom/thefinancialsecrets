@@ -36,6 +36,20 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			)
 		);
 		register_block_style(
+			'core/columns',
+			array(
+				'name'         => 'border-1-columns',
+				'label'        => __( 'Border 1', 'twentytwentyfour' ),
+				/*
+				 * Styles for the custom Arrow icon style of the Details block
+				 */
+				// 'inline_style' => '
+				// .is-style-snug-group > * {
+				// 	margin-block-start: 0;
+				// }',
+			)
+		);
+		register_block_style(
 			'core/details',
 			array(
 				'name'         => 'arrow-icon-details',
@@ -78,6 +92,26 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 
 				.is-style-pill a:hover {
 					background-color: var(--wp--preset--color--contrast-3);
+				}',
+			)
+		);
+		register_block_style(
+			'core/read-more',
+			array(
+				'name'         => 'custom-read-more',
+				'label'        => __( 'Custom', 'twentytwentyfour' ),
+				'inline_style' => '
+				.is-style-custom-read-more {
+					font-size: var(--wp--preset--font-size--small);
+					font-weight: bold;
+					display: inline-block;
+					margin: 0 auto;
+					letter-spacing: -1px;
+					border-radius: var(--wp--preset--spacing--30);
+					padding: var(--wp--preset--spacing--20);
+					color: #fff;
+					text-transform: uppercase;
+					background-color: var(--wp--preset--color--accent) !important;
 				}',
 			)
 		);
@@ -260,6 +294,16 @@ if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 				'path'   => get_parent_theme_file_path( 'assets/css/navigation.css' ),
 			)
 		);
+		wp_enqueue_block_style(
+			'core/columns',
+			array(
+				'handle' => 'twentytwentyfour-columns',
+				'src'    => get_parent_theme_file_uri( 'assets/css/columns.css' ),
+				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
+				'path'   => get_parent_theme_file_path( 'assets/css/columns.css' ),
+			)
+		);
+		// wp_enqueue_style( 'my_theme_style', get_stylesheet_uri() );
 	}
 endif;
 

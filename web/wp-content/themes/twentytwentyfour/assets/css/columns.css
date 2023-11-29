@@ -1,0 +1,12 @@
+.is-style-border-1-columns {
+    border-top: 3px solid #ccc;
+    padding-top: var(--wp--preset--spacing--30)
+}
+.is-style-border-1-columns .wp-block-column .columns-3 > * {
+    border-left: 3px solid #ccc;
+    padding-left:  var(--wp--preset--spacing--30);
+    padding-right:  var(--wp--preset--spacing--30)
+}
+.is-style-border-1-columns .wp-block-column .columns-3 > *:first-child {
+    border: none
+}
