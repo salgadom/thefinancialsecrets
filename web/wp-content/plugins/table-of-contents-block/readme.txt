@@ -1,9 +1,9 @@
 === Table Of Contents Block ===
-Contributors: wpdevteam, re_enter_rupok, asif2bd, rahat89, fencermonir, hztyfoon
+Contributors: wpdevteam, re_enter_rupok, asif2bd, rahat89, fencermonir
 Tags: gutenberg, blocks, toc, table of contents, seo, schema
 Requires at least: 5.6
-Tested up to: 6.1
-Stable tag: 1.3.4
+Tested up to: 6.4
+Stable tag: 1.3.5
 License: GPLv3
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -118,6 +118,13 @@ Yes, it should work fine with all standard theme.
 
 
 == Changelog ==
+
+= 1.3.5 - 21/11/2023 =
+* Added: Table of Content link copy button
+* Added: Table of Content block support All Heading blocks
+* Added: Heading exclude option in Table of Content block
+* Fixed: Table of Content block doesn’t work inside wrapper/group block
+* Improved: Font loader
 
 = 1.3.4 - 18/12/2022 =
 * Fixed: Minor bugs

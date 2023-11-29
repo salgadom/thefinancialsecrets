@@ -98,6 +98,21 @@
 					"slug": "gradient-12",
 					"gradient": "linear-gradient(to bottom, #A4A4A4 50%, #F9F9F9 50%)",
 					"name": "Vertical hard pewter to white"
+				},
+				{
+					"slug": "gold",
+					"gradient": "linear-gradient(90deg, rgba(146,104,72,1) 0%, rgba(146,104,72,1) 13%, rgba(236,227,159,1) 29%, rgba(255,255,255,1) 35%, rgba(236,227,159,1) 43%, rgba(148,106,74,1) 79%)",
+					"name": "Gold"
+				},
+				{
+					"slug": "purple",
+					"gradient": "linear-gradient(0deg,rgb(70,20,99) 0%,rgb(46,23,62) 33%)",
+					"name": "Purple"
+				},
+				{
+					"slug": "purple-transparent",
+					"gradient": "linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(16, 9, 25) 33%)",
+					"name": "Purple transparent"
 				}
 			],
 			"palette": [
@@ -112,49 +127,49 @@
 					"slug": "base-2"
 				},
 				{
-					"color": "#111111",
+					"color": "#444",
 					"name": "Contrast",
 					"slug": "contrast"
 				},
 				{
-					"color": "#636363",
+					"color": "#2E173E",
 					"name": "Contrast / Two",
 					"slug": "contrast-2"
 				},
 				{
-					"color": "#A4A4A4",
+					"color": "#2E1A47",
 					"name": "Contrast / Three",
 					"slug": "contrast-3"
 				},
 				{
-					"color": "#cfcabe",
+					"color": "#461463",
 					"name": "Accent",
 					"slug": "accent"
 				},
 				{
-					"color": "#c2a990",
+					"color": "#7031BD",
 					"name": "Accent / Two",
 					"slug": "accent-2"
 				},
 				{
-					"color": "#d8613c",
+					"color": "#FF3131",
 					"name": "Accent / Three",
 					"slug": "accent-3"
 				},
 				{
-					"color": "#b1c5a4",
+					"color": "#FFDE59",
 					"name": "Accent / Four",
 					"slug": "accent-4"
 				},
 				{
-					"color": "#b5bdbc",
+					"color": "rgb(140 82 255 / 68%)",
 					"name": "Accent / Five",
 					"slug": "accent-5"
 				}
 			]
 		},
 		"layout": {
-			"contentSize": "620px",
+			"contentSize": "1250px",
 			"wideSize": "1280px"
 		},
 		"spacing": {
@@ -198,6 +213,29 @@
 		"typography": {
 			"fluid": true,
 			"fontFamilies": [
+				{
+					"fontFace": [
+						{
+							"fontFamily": "Nunito Sans",
+							"fontStyle": "normal",
+							"fontWeight": "200 300 400 500 600 700 800 900 1000",
+							"src": [
+								"file:./assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf"
+							]
+						},
+						{
+							"fontFamily": "Nunito Sans",
+							"fontStyle": "italic",
+							"fontWeight": "200 300 400 500 600 700 800 900 1000",
+							"src": [
+								"file:./assets/fonts/Nunito_Sans/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf"
+							]
+						}
+					],
+					"fontFamily": "\"Nunito Sans\", sans-serif",
+					"name": "Nunito Sans",
+					"slug": "heading-custom"
+				},
 				{
 					"fontFace": [
 						{
@@ -254,13 +292,13 @@
 				{
 					"fluid": false,
 					"name": "Small",
-					"size": "0.9rem",
+					"size": "1rem",
 					"slug": "small"
 				},
 				{
 					"fluid": false,
 					"name": "Medium",
-					"size": "1.05rem",
+					"size": "1.2rem",
 					"slug": "medium"
 				},
 				{
@@ -284,10 +322,10 @@
 				{
 					"fluid": {
 						"min": "2.5rem",
-						"max": "3.27rem"
+						"max": "3.1rem"
 					},
 					"name": "Extra Extra Large",
-					"size": "3.27rem",
+					"size": "3.1rem",
 					"slug": "xx-large"
 				}
 			],
@@ -532,7 +570,7 @@
 						},
 						"typography": {
 							"textDecoration": "none"
-						}
+						}		
 					}
 				},
 				"typography": {
@@ -915,6 +953,11 @@
 			"area": "header",
 			"name": "header",
 			"title": "Header"
+		},
+		{
+			"area": "header",
+			"name": "header-custom",
+			"title": "custom Header"
 		},
 		{
 			"area": "footer",

@@ -22,6 +22,20 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 	function twentytwentyfour_block_styles() {
 
 		register_block_style(
+			'core/group',
+			array(
+				'name'         => 'snug-group',
+				'label'        => __( 'Snug', 'twentytwentyfour' ),
+				/*
+				 * Styles for the custom Arrow icon style of the Details block
+				 */
+				'inline_style' => '
+				.is-style-snug-group > * {
+					margin-block-start: 0;
+				}',
+			)
+		);
+		register_block_style(
 			'core/details',
 			array(
 				'name'         => 'arrow-icon-details',
@@ -84,6 +98,59 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 				ul.is-style-checkmark-list li {
 					padding-inline-start: 1ch;
 				}',
+			)
+		);
+		register_block_style(
+			'core/cover',
+			array(
+				'name'         => 'promo',
+				'label'        => __( 'Promo', 'twentytwentyfour' ),
+				/*
+				 * Styles for the custom checkmark list block style
+				 * https://github.com/WordPress/gutenberg/issues/51480
+				 */
+				'inline_style' => '
+				.is-style-promo {
+					position: relative;
+					clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%);
+					padding-top: 0px;
+					padding-bottom: 80px;
+					color: #F5F6F5
+				}
+				.is-style-promo::before {
+					position: absolute;
+					bottom: -75%;
+					content: "";
+					display: block;
+					height: 100%;
+					z-index: 2;
+					min-height: auto;
+					width: 100%;
+					background: var(--wp--preset--gradient--gold);
+					clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);
+				}
+				.is-style-promo .formkit-form .formkit-field, .is-style-promo .formkit-form .formkit-submit {
+					flex: 100 1 auto !important;
+				}
+				.is-style-promo .formkit-form .formkit-field {
+					width: 70%;
+				}
+				.is-style-promo .formkit-form .formkit-field input {
+					border-radius: 40px !important;
+					overflow: hidden;
+					text-align: center;
+					padding: 15px;
+				}
+				.is-style-promo .formkit-form .formkit-submit {
+					margin-left: -40px !important;
+					padding: 8px !important;
+					margin-top: -4px !important;
+					font-size: 20px !important;
+				}
+				.is-style-promo .formkit-form .formkit-powered-by-convertkit-container {
+					display: none !important;
+				}
+				',
 			)
 		);
 		register_block_style(
@@ -167,12 +234,30 @@ if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 		 * See https://make.wordpress.org/core/2021/12/15/using-multiple-stylesheets-per-block/ for more info.
 		 */
 		wp_enqueue_block_style(
+			'core/social-links',
+			array(
+				'handle' => 'twentytwentyfour-social-links',
+				'src'    => get_parent_theme_file_uri( 'assets/css/social-links.css' ),
+				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
+				'path'   => get_parent_theme_file_path( 'assets/css/social-links.css' ),
+			)
+		);		
+		wp_enqueue_block_style(
 			'core/button',
 			array(
 				'handle' => 'twentytwentyfour-button-style-outline',
 				'src'    => get_parent_theme_file_uri( 'assets/css/button-outline.css' ),
 				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
 				'path'   => get_parent_theme_file_path( 'assets/css/button-outline.css' ),
+			)
+		);		
+		wp_enqueue_block_style(
+			'core/navigation',
+			array(
+				'handle' => 'twentytwentyfour-navigation',
+				'src'    => get_parent_theme_file_uri( 'assets/css/navigation.css' ),
+				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
+				'path'   => get_parent_theme_file_path( 'assets/css/navigation.css' ),
 			)
 		);
 	}
@@ -202,5 +287,3 @@ if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
 		);
 	}
 endif;
-
-add_action( 'init', 'twentytwentyfour_pattern_categories' );
