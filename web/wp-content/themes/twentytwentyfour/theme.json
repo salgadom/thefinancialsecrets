@@ -142,6 +142,11 @@
 					"slug": "contrast-3"
 				},
 				{
+					"color": "#451B6C",
+					"name": "Contrast / Four",
+					"slug": "contrast-4"
+				},
+				{
 					"color": "#461463",
 					"name": "Accent",
 					"slug": "accent"

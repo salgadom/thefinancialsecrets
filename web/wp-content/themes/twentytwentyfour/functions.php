@@ -26,9 +26,6 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			array(
 				'name'         => 'snug-group',
 				'label'        => __( 'Snug', 'twentytwentyfour' ),
-				/*
-				 * Styles for the custom Arrow icon style of the Details block
-				 */
 				'inline_style' => '
 				.is-style-snug-group > * {
 					margin-block-start: 0;
@@ -39,14 +36,14 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/columns',
 			array(
 				'name'         => 'border-1-columns',
-				'label'        => __( 'Border 1', 'twentytwentyfour' ),
-				/*
-				 * Styles for the custom Arrow icon style of the Details block
-				 */
-				// 'inline_style' => '
-				// .is-style-snug-group > * {
-				// 	margin-block-start: 0;
-				// }',
+				'label'        => __( 'Border 1', 'twentytwentyfour' )
+			)
+		);
+		register_block_style(
+			'core/columns',
+			array(
+				'name'         => 'bgImage-1-columns',
+				'label'        => __( 'BgImage 1', 'twentytwentyfour' )
 			)
 		);
 		register_block_style(
@@ -138,53 +135,14 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/cover',
 			array(
 				'name'         => 'promo',
-				'label'        => __( 'Promo', 'twentytwentyfour' ),
-				/*
-				 * Styles for the custom checkmark list block style
-				 * https://github.com/WordPress/gutenberg/issues/51480
-				 */
-				'inline_style' => '
-				.is-style-promo {
-					position: relative;
-					clip-path: polygon(0 0, 100% 0%, 100% 78%, 0 100%);
-					padding-top: 0px;
-					padding-bottom: 80px;
-					color: #F5F6F5
-				}
-				.is-style-promo::before {
-					position: absolute;
-					bottom: -75%;
-					content: "";
-					display: block;
-					height: 100%;
-					z-index: 2;
-					min-height: auto;
-					width: 100%;
-					background: var(--wp--preset--gradient--gold);
-					clip-path: polygon(0 22%, 100% 0, 100% 100%, 0% 100%);
-				}
-				.is-style-promo .formkit-form .formkit-field, .is-style-promo .formkit-form .formkit-submit {
-					flex: 100 1 auto !important;
-				}
-				.is-style-promo .formkit-form .formkit-field {
-					width: 70%;
-				}
-				.is-style-promo .formkit-form .formkit-field input {
-					border-radius: 40px !important;
-					overflow: hidden;
-					text-align: center;
-					padding: 15px;
-				}
-				.is-style-promo .formkit-form .formkit-submit {
-					margin-left: -40px !important;
-					padding: 8px !important;
-					margin-top: -4px !important;
-					font-size: 20px !important;
-				}
-				.is-style-promo .formkit-form .formkit-powered-by-convertkit-container {
-					display: none !important;
-				}
-				',
+				'label'        => __( 'Promo', 'twentytwentyfour' )
+			)
+		);
+		register_block_style(
+			'core/cover',
+			array(
+				'name'         => 'promo-2',
+				'label'        => __( 'Promo 2', 'twentytwentyfour' )
 			)
 		);
 		register_block_style(
@@ -301,6 +259,15 @@ if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 				'src'    => get_parent_theme_file_uri( 'assets/css/columns.css' ),
 				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
 				'path'   => get_parent_theme_file_path( 'assets/css/columns.css' ),
+			)
+		);
+		wp_enqueue_block_style(
+			'core/cover',
+			array(
+				'handle' => 'twentytwentyfour-cover',
+				'src'    => get_parent_theme_file_uri( 'assets/css/cover.css' ),
+				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
+				'path'   => get_parent_theme_file_path( 'assets/css/cover.css' ),
 			)
 		);
 		// wp_enqueue_style( 'my_theme_style', get_stylesheet_uri() );
