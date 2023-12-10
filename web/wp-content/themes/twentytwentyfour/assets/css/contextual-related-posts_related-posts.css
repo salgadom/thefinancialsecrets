@@ -1,0 +1,15 @@
+.crp_related ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+.crp_related ul li {
+    list-style: none;
+    width: 200px;
+    text-align: center;
+}
+.crp_related img {
+    border-radius: 100px;
+}

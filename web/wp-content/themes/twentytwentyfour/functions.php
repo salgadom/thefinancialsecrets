@@ -47,6 +47,13 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			)
 		);
 		register_block_style(
+			'core/columns',
+			array(
+				'name'         => 'custom-single-sidebar-columns',
+				'label'        => __( 'With sidebar', 'twentytwentyfour' )
+			)
+		);
+		register_block_style(
 			'core/details',
 			array(
 				'name'         => 'arrow-icon-details',
@@ -268,6 +275,15 @@ if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 				'src'    => get_parent_theme_file_uri( 'assets/css/cover.css' ),
 				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
 				'path'   => get_parent_theme_file_path( 'assets/css/cover.css' ),
+			)
+		);
+		wp_enqueue_block_style(
+			'contextual-related-posts/related-posts',
+			array(
+				'handle' => 'twentytwentyfour-contextual-related-posts-related-posts',
+				'src'    => get_parent_theme_file_uri( 'assets/css/contextual-related-posts_related-posts.css' ),
+				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
+				'path'   => get_parent_theme_file_path( 'assets/css/contextual-related-posts_related-posts.css' ),
 			)
 		);
 		// wp_enqueue_style( 'my_theme_style', get_stylesheet_uri() );

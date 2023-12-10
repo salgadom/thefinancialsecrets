@@ -29,3 +29,122 @@
         margin-bottom: 0
     }
 }
+
+.is-style-custom-single-sidebar-columns h1,
+.is-style-custom-single-sidebar-columns h2 {
+    letter-spacing: 0;
+}
+.is-style-custom-single-sidebar-columns > *:first-child {
+    box-shadow: -4px -3px 13px 3px #0000001c;
+}
+.is-style-custom-single-sidebar-columns .wp-block-simpletoc-toc {
+    box-shadow: 4px 3px 13px 3px #0000001c;
+    background-color: white;
+    padding: var(--wp--preset--spacing--20);
+    max-width: 300px;
+    position: relative;
+    top: auto;
+}
+.is-style-custom-single-sidebar-columns .wp-block-simpletoc-toc .simpletoc-title {
+    margin-top: 0;
+    font-size: clamp(1.039rem, 1.039rem + ((1vw - 0.2rem) * 0.935), 1.6rem);
+    font-weight: 100;
+}
+.is-style-custom-single-sidebar-columns aside, 
+.is-style-custom-single-sidebar-columns aside > div {
+    height: 100%;
+}
+
+.is-style-custom-single-sidebar-columns .simpletoc-list {
+    padding-left: 0;
+    list-style-position: inside;
+    max-height: none;
+    overflow: visible;
+}
+.is-style-custom-single-sidebar-columns > div:first-child  .wp-block-simpletoc-toc {
+    display: block;
+}
+
+@media (min-width: 782px) {
+    .is-style-custom-single-sidebar-columns > div:first-child  .wp-block-simpletoc-toc {
+        display: none;
+    }
+    .is-style-custom-single-sidebar-columns aside .wp-block-simpletoc-toc {
+        position: sticky;
+        top: 20px;
+    }
+    .is-style-custom-single-sidebar-columns .simpletoc-list {
+        max-height: 500px;
+        overflow: auto;
+    }
+}
+
+.is-style-custom-single-sidebar-columns .simpletoc-list li {
+    padding: var(--wp--preset--spacing--10) 0;
+    font-size: 16px;
+    border-top: 3px solid var(--wp--preset--color--accent-4);
+    cursor: pointer;
+}
+.is-style-custom-single-sidebar-columns .simpletoc-list li a {
+    margin-left: 20px;
+    text-decoration: none;
+}
+.is-style-custom-single-sidebar-columns .simpletoc-list li:hover a {
+    text-decoration: underline;
+}
+.is-style-custom-single-sidebar-columns .simpletoc-list li:first-child {
+    border-top: none;
+}
+.is-style-custom-single-sidebar-columns .simpletoc-list li::marker {
+    font-weight: bold;
+    font-size: 18px;
+    width: 40px;
+    display: block;
+}
+
+.is-style-custom-single-sidebar-columns aside .wp-block-cover .formkit-form {
+    margin-bottom: 0 !important;
+}
+.is-style-custom-single-sidebar-columns aside .wp-block-cover .formkit-form .formkit-field {
+    margin: 0 -20px !important;
+    margin-bottom: 12px !important;
+}
+.is-style-custom-single-sidebar-columns aside .wp-block-cover .formkit-form .formkit-field input {
+    padding: 12px;
+    font-size: 15px !important;
+}
+.is-style-custom-single-sidebar-columns aside .wp-block-cover .formkit-form .formkit-submit {
+    padding: 12px 8px !important;
+    font-size: 15px !important;
+    display: inline-block;
+}
+.is-style-custom-single-sidebar-columns aside .wp-block-cover .formkit-form .formkit-submit > span {
+    color: transparent;
+    line-height: 0;
+    padding: 0;
+}
+.is-style-custom-single-sidebar-columns aside .wp-block-cover .formkit-form .formkit-submit > span::after {
+    content: "SUBSCRIBE";
+    display: block;
+    color: white;
+    font-weight: bold;
+    line-height: initial;
+    letter-spacing: -1px;
+}
+
+.is-style-custom-single-sidebar-columns .author-bio > .wp-block-group.is-horizontal {
+    flex-flow: column;
+}
+
+@media (min-width: 782px) {
+    .is-style-custom-single-sidebar-columns .author-bio > .wp-block-group.is-horizontal {
+        flex-flow: row;
+    }
+    .is-style-custom-single-sidebar-columns > *:nth-child(2) {
+        margin-left: calc(-1 * var(--wp--preset--spacing--50));
+        margin-top: var(--wp--preset--spacing--30);
+    }
+    .is-style-custom-single-sidebar-columns > *:first-child {
+        padding-right: var(--wp--preset--spacing--60) !important;
+    }
+}
