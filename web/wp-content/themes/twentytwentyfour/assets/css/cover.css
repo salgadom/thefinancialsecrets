@@ -100,3 +100,33 @@
     line-height: initial;
     letter-spacing: -1px;
 }
+
+.is-style-cover-aside.wp-block-cover .formkit-form {
+    margin-bottom: 0 !important;
+}
+.is-style-cover-aside.wp-block-cover .formkit-form .formkit-field {
+    margin: 0 -20px !important;
+    margin-bottom: 12px !important;
+}
+.is-style-cover-aside.wp-block-cover .formkit-form .formkit-field input {
+    padding: 12px;
+    font-size: 15px !important;
+}
+.is-style-cover-aside.wp-block-cover .formkit-form .formkit-submit {
+    padding: 12px 8px !important;
+    font-size: 15px !important;
+    display: inline-block;
+}
+.is-style-cover-aside.wp-block-cover .formkit-form .formkit-submit > span {
+    color: transparent;
+    line-height: 0;
+    padding: 0;
+}
+.is-style-cover-aside.wp-block-cover .formkit-form .formkit-submit > span::after {
+    content: "SUBSCRIBE";
+    display: block;
+    color: white;
+    font-weight: bold;
+    line-height: initial;
+    letter-spacing: -1px;
+}

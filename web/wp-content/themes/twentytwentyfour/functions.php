@@ -33,6 +33,30 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			)
 		);
 		register_block_style(
+			'core/categories',
+			array(
+				'name'         => 'custom-categories-list',
+				'label'        => __( 'Style 1', 'twentytwentyfour' ),
+				'inline_style' => '
+				.is-style-custom-categories-list {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 15px;
+					--justify-content: center
+				}
+				.is-style-custom-categories-list li a {
+					display: block;
+					padding: 10px 20px;
+					background: #7a3aa0;
+					color: #fff;
+					font-weight: bold;
+					text-decoration: none;
+					border: 3px solid #ffea00;
+					border-radius: 5px
+				}'
+			)
+		);
+		register_block_style(
 			'core/columns',
 			array(
 				'name'         => 'border-1-columns',
@@ -150,6 +174,13 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			array(
 				'name'         => 'promo-2',
 				'label'        => __( 'Promo 2', 'twentytwentyfour' )
+			)
+		);
+		register_block_style(
+			'core/cover',
+			array(
+				'name'         => 'cover-aside',
+				'label'        => __( 'Aside', 'twentytwentyfour' )
 			)
 		);
 		register_block_style(
